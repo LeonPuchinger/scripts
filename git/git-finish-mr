@@ -1,0 +1,14 @@
+#!/bin/env bash
+# run this after your feature branch has been merged on the git remote
+feature_branch=$(git rev-parse --abbrev-ref HEAD)
+main_branch="main"
+git show-branch "master"
+if [ $? -e 0 ]; then
+	$main_branch="master"
+else
+	echo "no main or master branch found"
+	exit 1
+fi
+git checkout $main_branch
+git pull
+git branch -D $feature_branch
