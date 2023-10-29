@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 # run this after your feature branch has been merged on the git remote
 feature_branch=$(git rev-parse --abbrev-ref HEAD)
 main_branch="main"

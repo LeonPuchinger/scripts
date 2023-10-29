@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/bin/bash
 # run this to create a new branch locally and on the remote
 if [ $# -ne 1 ]; then
 	echo "please provide the name for the new branch"
